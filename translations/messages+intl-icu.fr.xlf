@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="fr" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="Q7x27VY" resname="Event modified successfuly">
+        <source>Event modified successfuly</source>
+        <target>Evenement Modifie avec succes</target>
+      </trans-unit>
+      <trans-unit id="AKIkwFq" resname="Statics">
+        <source>Statics</source>
+        <target>Statistiques</target>
+      </trans-unit>
+      <trans-unit id="awzJBNC" resname="Users">
+        <source>Users</source>
+        <target>Utilisateurs</target>
+      </trans-unit>
+      <trans-unit id="tnRwZLK" resname="Programs">
+        <source>Programs</source>
+        <target>Programmes</target>
+      </trans-unit>
+      <trans-unit id="Th9Jqci" resname="Event">
+        <source>Event</source>
+        <target>Evenements</target>
+      </trans-unit>
+      <trans-unit id="KkKO7kI" resname="Sponsors">
+        <source>Sponsors</source>
+        <target>Sponsors</target>
+      </trans-unit>
+      <trans-unit id="jDHm5yI" resname="Local">
+        <source>Local</source>
+        <target>Locaux</target>
+      </trans-unit>
+      <trans-unit id="uLHYlMa" resname="Categories">
+        <source>Categories</source>
+        <target>Categories</target>
+      </trans-unit>
+      <trans-unit id="TtyL_vx" resname="Products">
+        <source>Products</source>
+        <target>Produits</target>
+      </trans-unit>
+      <trans-unit id="a_CQgly" resname="Order">
+        <source>Order</source>
+        <target>Commandes</target>
+      </trans-unit>
+      <trans-unit id="Ur.lhKX" resname="Delivery">
+        <source>Delivery</source>
+        <target>Livraison</target>
+      </trans-unit>
+      <trans-unit id="Fr.5Pir" resname="Delivery Man">
+        <source>Delivery Man</source>
+        <target>Livreur</target>
+      </trans-unit>
+      <trans-unit id="JxxTVjH" resname="Carrier">
+        <source>Carrier</source>
+        <target>transporteur</target>
+      </trans-unit>
+      <trans-unit id="RKV7IuA" resname="Alert">
+        <source>Alert</source>
+        <target>Alerte</target>
+      </trans-unit>
+      <trans-unit id="HIXBIim" resname="Claims">
+        <source>Claims</source>
+        <target>Reclamations</target>
+      </trans-unit>
+      <trans-unit id="CxhLxdU" resname="Sign Out">
+        <source>Sign Out</source>
+        <target>Sign Out</target>
+      </trans-unit>
+      <trans-unit id="4mfTQ4I" resname="Profil">
+        <source>Profil</source>
+        <target>Profile</target>
+      </trans-unit>
+      <trans-unit id="59PnafP" resname="Administrator">
+        <source>Administrator</source>
+        <target>Administrateur</target>
+      </trans-unit>
+      <trans-unit id="8SX0EPo" resname="Name of Event">
+        <source>Name of Event</source>
+        <target>Nom de l'evenement</target>
+      </trans-unit>
+      <trans-unit id="TFL6rV3" resname="Start Date">
+        <source>Start Date</source>
+        <target>Date du debut</target>
+      </trans-unit>
+      <trans-unit id="6XCVHPt" resname="End Date">
+        <source>End Date</source>
+        <target>Date de la fin</target>
+      </trans-unit>
+      <trans-unit id="PN..9Ga" resname="Adress">
+        <source>Adress</source>
+        <target>Adresse</target>
+      </trans-unit>
+      <trans-unit id="qcduNsk" resname="Number of Places">
+        <source>Number of Places</source>
+        <target>Nombre de Places</target>
+      </trans-unit>
+      <trans-unit id="Um4Ah8w" resname="Description">
+        <source>Description</source>
+        <target>Description</target>
+      </trans-unit>
+      <trans-unit id="mhxU9V5" resname="Picture">
+        <source>Picture</source>
+        <target>Image</target>
+      </trans-unit>
+      <trans-unit id="RkxP.QG" resname="Edit">
+        <source>Edit</source>
+        <target>Modifier</target>
+      </trans-unit>
+      <trans-unit id="4tClSWj" resname="Delete">
+        <source>Delete</source>
+        <target>Supprimer</target>
+      </trans-unit>
+      <trans-unit id="G_ifBOi" resname="Add an Event">
+        <source>Add an Event</source>
+        <target>Ajouter un evenement</target>
+      </trans-unit>
+      <trans-unit id="3NHVIj9" resname="Name">
+        <source>Name</source>
+        <target>Nom</target>
+      </trans-unit>
+      <trans-unit id="on5ZoRK" resname="Number of places">
+        <source>Number of places</source>
+        <target>Nombre de place</target>
+      </trans-unit>
+      <trans-unit id="n9coxmy" resname="Add">
+        <source>Add</source>
+        <target>Ajouter</target>
+      </trans-unit>
+      <trans-unit id="mcQKtAW" resname="Date">
+        <source>Date</source>
+        <target>Date</target>
+      </trans-unit>
+      <trans-unit id="voGbRXy" resname="Number of Place">
+        <source>Number of Place</source>
+        <target>Nombre de Place</target>
+      </trans-unit>
+      <trans-unit id="ynjmNWG" resname="Email Adress">
+        <source>Email Adress</source>
+        <target> Adress Mail</target>
+      </trans-unit>
+      <trans-unit id="ctupru2" resname="Phone Number">
+        <source>Phone Number</source>
+        <target>Telephoner</target>
+      </trans-unit>
+      <trans-unit id="DOEbkVC" resname="Add Sponsor">
+        <source>Add Sponsor</source>
+        <target>AJouter un sponsor</target>
+      </trans-unit>
+      <trans-unit id="jRT25y3" resname="Events">
+        <source>Events</source>
+        <target>Evenements</target>
+      </trans-unit>
+      <trans-unit id="1X1ItxA" resname="Log Out">
+        <source>Log Out</source>
+        <target>Log Out</target>
+      </trans-unit>
+      <trans-unit id="32MuYPL" resname="Our Events">
+        <source>Our Events</source>
+        <target>Nos Evenements</target>
+      </trans-unit>
+      <trans-unit id="KLE_vnO" resname="Our Event Starts">
+        <source>Our Event Starts</source>
+        <target>L'evenemnt Commence le</target>
+      </trans-unit>
+      <trans-unit id="TEkTneF" resname="Our Event Ends">
+        <source>Our Event Ends</source>
+        <target>L'evenement se termine le</target>
+      </trans-unit>
+      <trans-unit id="DFvRrUQ" resname="More Details">
+        <source>More Details</source>
+        <target>Plus de details</target>
+      </trans-unit>
+      <trans-unit id="ZPkVy4v" resname="Like">
+        <source>Like</source>
+        <target>J'aime</target>
+      </trans-unit>
+      <trans-unit id="zw95U_e" resname="you can propose an event here">
+        <source>you can propose an event here</source>
+        <target>Vous Pouvez Proposez Un evenement içi</target>
+      </trans-unit>
+      <trans-unit id="6LSlnyK" resname="it gives us great pleasure">
+        <source>it gives us great pleasure</source>
+        <target>ça nous fait un grand plaisir</target>
+      </trans-unit>
+      <trans-unit id="04oJ0Mo" resname="&lt;h3&gt;Proposed Name:&lt;/h3&gt;">
+        <source>&lt;h3&gt;Proposed Name:&lt;/h3&gt;</source>
+        <target><![CDATA[<h3>Nom Propose:</h3>]]></target>
+      </trans-unit>
+      <trans-unit id="KVLSn5b" resname="&lt;h3&gt;Proposed Date:&lt;/h3&gt;">
+        <source>&lt;h3&gt;Proposed Date:&lt;/h3&gt;</source>
+        <target><![CDATA[<h3>Date Propose:</h3>]]></target>
+      </trans-unit>
+      <trans-unit id="q62TSh4" resname="&lt;h3&gt;Number of Places:&lt;/h3&gt;">
+        <source>&lt;h3&gt;Number of Places:&lt;/h3&gt;</source>
+        <target><![CDATA[<h3>Nombre de place:</h3>]]></target>
+      </trans-unit>
+      <trans-unit id="7dWaBHS" resname="&lt;h3&gt;Your Email:&lt;/h3&gt;">
+        <source>&lt;h3&gt;Your Email:&lt;/h3&gt;</source>
+        <target><![CDATA[<h3>Votre Adresse Mail:</h3>]]></target>
+      </trans-unit>
+      <trans-unit id="y5iZZ9U" resname="&lt;h3&gt;Send Message&lt;/h3&gt;">
+        <source>&lt;h3&gt;Send Message&lt;/h3&gt;</source>
+        <target><![CDATA[<h3>Envoyez</h3>]]></target>
+      </trans-unit>
+      <trans-unit id="LYH5vXr" resname="'Statistics of events by number of places'">
+        <source>'Statistics of events by number of places'</source>
+        <target>'Statistique des evenements par nombre de places'</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

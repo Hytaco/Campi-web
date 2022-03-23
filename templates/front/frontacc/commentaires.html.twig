@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link href={{asset("css/font-awesome.min.css")}} rel="stylesheet">
+    <link href={{ asset("css/bootstrap.min.css") }} rel="stylesheet">
+    <link href="{{asset("css/templatemo-style.css")}}" rel="stylesheet">
+    <link href="{{asset("css/owl.theme.css")}}" rel="stylesheet">
+    <link href="{{asset("css/owl.carousel.css")}}" rel="stylesheet">
+    <link href="{{asset("css/templatemo-green.css")}}" rel="stylesheet">
+    <link href="{{asset("css/tooplate-style.css")}}" rel="stylesheet">
+    <link href="{{asset("css/magnific-popup.css")}}" rel="stylesheet">
+
+
+</head>
+<body>
+<div class="preloader">
+    <div class="spinner">
+        <span class="sk-inner-circle"></span>
+    </div>
+</div>
+
+<style type="text/css">
+
+    @media(min-width:768px) {
+        .custom-navbar {
+            background: #4dc47d;
+        }
+        .custom-navbar.top-nav-collapse {
+            background: #4dc47d;
+            padding: 20px 0;
+        }
+    }
+
+
+
+
+</style>
+<!-- MENU -->
+<div class="navbar custom-navbar navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- NAVBAR HEADER -->
+        <div class="navbar-header">
+            <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon icon-bar"></span>
+                <span class="icon icon-bar"></span>
+                <span class="icon icon-bar"></span>
+            </button>
+            <!-- lOGO -->
+            <a href="/accueil" class="navbar-brand">Campi</a>
+        </div>
+
+        <!-- MENU LINKS -->
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="/accueil#aboutproject" class="smoothScroll">Programmes</a></li>
+                <li><a href="/evenementf" class="smoothScroll">Evenements</a></li>
+                <li><a href="/accueil#aboutlocaux" class="smoothScroll">Locaux</a></li>
+                <li><a href="/accueil#team" class="smoothScroll">Categories</a></li>
+                <li><a href="/alertsf" class="smoothScroll">Alertes</a></li>
+                <li><a href="/accueil#alerts" class="smoothScroll">Reclamations</a></li>
+                <li><a href="/profilef" class="smoothScroll">Profile</a></li>
+                <li><a href="#" class="smoothScroll">Deconnexion</a></li>
+
+
+            </ul>
+        </div>
+
+    </div>
+</div>
+<br> <br> <br> <br>
+<div  class="services section-background" >
+
+    <div class="page-wrapper">
+
+        <div class="container-fluid">
+
+            <div class="row">
+                <!-- column -->
+                <div class="col-lg-6">
+                    <div class="card">
+                        <div >
+
+                            <h6 class="card-title">Commentaires sur le locale</h6>
+                        </div>
+                        <div class="comment-widgets scrollable">
+                            {% for c in coms%}
+
+                            <!-- Comment Row -->
+
+                            <div class="d-flex flex-row comment-row">
+
+                                <div class="comment-text active w-100">
+                                    <h6 class="font-medium">{{ c.user.nom }}  {{ c.user.prenom }}</h6>
+                                    <span class="m-b-15 d-block">{{ c.message}}</span>
+                                    <div class="comment-footer">
+
+                                        <td><a  href="{{ path ('supprimercom',{'id':c.id}) }}">Supprimer</a></td>
+                                        <span class="action-icons active">
+
+                                                <a href="javascript:void(0)"><i class="icon-close"></i></a>
+                                                <a href="{{ path('post_lik',{'id':c.id}) }}" class="btn btn-link js-like">
+                                                   {% if app.user and c.islikedByUser(app.user) %}
+                                                       <i class="fas fa-thumbs-up "></i>
+
+                                                   {% else %}
+                                                       <i class="far fa-thumbs-up"></i>
+                                                   {% endif %}
+                                                   <span class="js-likes">{{ c.lik | length }}</span>
+
+                                                   <span class="js-label">j'aime</span>
+
+
+                                               </a>
+                                            </span>
+                                    </div>
+                                </div>
+                            </div>
+                            {%endfor%}
+                        </div>
+
+
+
+                        <div class="panel-footer">
+                            {{ form_start(form) }}
+                            <div class="input-group">
+
+                                {{ form_widget(form.message,{'attr': {'class': 'form-control input-md','placeholder':'ecrire votre commentaire'}}) }} <span class="input-group-btn">
+
+
+
+                                                    <button class="btn  btn-md" id="btn-chat">Send</button>
+
+                                                    </span>
+
+                            </div>
+                            {{ form_end(form) }}
+
+                        </div>
+
+                    </div>
+                </div>
+                <!-- column -->
+
+            </div>
+            <!-- ============================================================== -->
+            <!-- Recent comment and chats -->
+            <!-- ============================================================== -->
+        </div>
+
+    </div>
+</div>
+
+</div>
+<footer>
+
+
+
+
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-5 col-sm-6">
+                <h3>Hytaco</h3>
+                <p>08 Rue Ibn Kholdoun , El Ghazela , <br>Riadh El Andalous</p>
+
+
+            </div>
+
+            <div class="col-md-4 col-sm-6">
+                <div class="footer-info">
+                    <h3>Restez en contact</h3>
+                    <p><a href="tel:55039837">+216 55 039 837</a></p>
+                    <p><a href="mailto:info@company.com">hytaco.group@gmail.com</a></p>
+                    <p><a href="#">@ESPRIT</a></p>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-12">
+
+                <h3>A propos de nous</h3>
+                <p>Nous somme un groupe de 6 personnes de l'etabliseement ESPRIT<br> avec une seule motivation , créer<br>le premier site de camping en Tunisie.</p>
+                <ul class="social-icon">
+                    <li><a href="#" class="fa fa-twitter"></a></li>
+                    <li><a href="#" class="fa fa-facebook"></a></li>
+                    <li><a href="#" class="fa fa-instagram"></a></li>
+                    <li><a href="#" class="fa fa-linkedin"></a></li>
+                </ul>
+
+            </div>
+
+            <div class="clearfix"></div>
+
+
+        </div>
+    </div>
+</footer>
+
+<script src="../../assets/libs/jquery/dist/jquery.min.js"></script>
+<!-- Bootstrap tether Core JavaScript -->
+<script src="../../assets/libs/popper.js/dist/umd/popper.min.js"></script>
+<script src="../../assets/libs/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="../../dist/js/app-style-switcher.js"></script>
+<!--Wave Effects -->
+<script src="../../dist/js/waves.js"></script>
+<!--Menu sidebar -->
+<script src="../../dist/js/sidebarmenu.js"></script>
+<!--Custom JavaScript -->
+<script src="../../dist/js/custom.js"></script>
+<!--This page JavaScript -->
+<!--chartis chart-->
+<script src="../../assets/libs/chartist/dist/chartist.min.js"></script>
+<script src="../../assets/libs/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.min.js"></script>
+<script src="../../dist/js/pages/dashboards/dashboard1.js"></script>*
+<script >
+    var d = new Date();
+    document.getElementById("datedemande").valueAsDate=d;
+
+</script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script>
+
+
+
+
+    function onClickBtnLike(event){
+        event.preventDefault();
+        const url = this.href;
+        const spanCount = this.querySelector('span.js-likes');
+        const icone = this.querySelector('i');
+
+        axios.get(url).then(function (response){
+
+
+
+            spanCount.textContent = response.data.likes;
+            if (icone.classList.contains('fas')) {
+                icone.classList.replace('fas','far');
+            }
+            else {icone.classList.replace('far','fas');
+            }
+        }).catch(function (error){
+            if(error.response.status === 403 )
+            {
+                window.alert("vous ne pouvez pas liker un article si vous etes pas connecte !")
+
+            }
+        });
+    }
+    document.querySelectorAll('a.js-like').forEach(function(link){
+        link.addEventListener('click',onClickBtnLike);
+    })
+
+
+
+
+
+</script>
+</body>
+
+</html>

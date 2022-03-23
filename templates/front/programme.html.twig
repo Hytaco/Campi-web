@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+     <title>Campi</title>
+
+     <!--
+
+     Template 2099 Scenic
+
+     http://www.tooplate.com/view/2099-scenic
+
+     -->
+
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+     <meta name="description" content="">
+     <meta name="keywords" content="">
+     <meta name="author" content="">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+     <link rel="stylesheet" href="css/bootstrap.min.css">
+     <link rel="stylesheet" href="css/font-awesome.min.css">
+     <link rel="stylesheet" href="css/magnific-popup.css">
+
+     <link rel="stylesheet" href="css/owl.theme.css">
+     <link rel="stylesheet" href="css/owl.carousel.css">
+
+     <link rel="stylesheet" href="css/templatemo-green.css">
+     <!-- MAIN CSS -->
+     <link rel="stylesheet" href="css/tooplate-style.css">
+
+</head>
+<body>
+
+<!-- PRE LOADER -->
+<div class="preloader">
+     <div class="spinner">
+          <span class="sk-inner-circle"></span>
+     </div>
+</div>
+
+<style type="text/css">
+     
+@media(min-width:768px) {
+  .custom-navbar {
+    background: #4dc47d; 
+  }
+  .custom-navbar.top-nav-collapse {
+    background: #4dc47d;
+    padding: 20px 0;
+  }
+}
+
+
+
+
+</style>
+<!-- MENU -->
+<div class="navbar custom-navbar navbar-fixed-top" role="navigation">
+     <div class="container">
+
+          <!-- NAVBAR HEADER -->
+          <div class="navbar-header">
+               <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon icon-bar"></span>
+                    <span class="icon icon-bar"></span>
+                    <span class="icon icon-bar"></span>
+               </button>
+               <!-- lOGO -->
+               <a href="/accueil" class="navbar-brand">Campi</a>
+          </div>
+
+          <!-- MENU LINKS -->
+          <div class="collapse navbar-collapse">
+               <ul class="nav navbar-nav navbar-right">
+                    <li><a href="/programmesf" class="smoothScroll">Programmes</a></li>
+                    <li><a href="/evenementf" class="smoothScroll">Evenements</a></li>
+                    <li><a href="#team" class="smoothScroll">Categories</a></li>
+                    <li><a href="#aboutlocaux" class="smoothScroll">Locaux</a></li>
+                    <li><a href="/alertsf" class="smoothScroll">Alertes</a></li>
+                    <li><a href="#alerts" class="smoothScroll">Reclamations</a></li>
+                    <li><a href="/proposition" class="smoothScroll">Propositions</a></li>
+                    <li><a href="/panier" class="smoothScroll">Panier</a></li>
+                    <li><a href="/logoutf" class="smoothScroll">Deconnexion</a></li>
+
+
+               </ul>
+          </div>
+
+     </div>
+</div>
+
+<br><br><br>
+<!-- PROJECT -->
+<section id="locaux" class="parallax-section">
+     <div class="container">
+          <div class="row">
+
+               {% for prog in progs %}
+
+               <div class="col-md-6 col-sm-6">
+                    <!-- PROJECT ITEM -->
+                    <div  class="project-item">
+
+                         <img   src="images/properties/{{ prog.locale.imageName }}" class="img-responsive" alt="">
+
+                              <div class="project-overlay">
+                                   <div class="project-info">
+                                        <h1  >{{ prog.nom }}</h1>
+                                        <h3>{{ prog.date|date("d-m-Y") }}</h3>
+                                        <a href="{{ path('selectionprog',{'id':prog.id})  }}">Plus de details</a>
+                                   </div>
+                              </div>
+                         </a>
+                    </div>
+               </div>
+               {% endfor %}
+          </div>
+     </div>
+</section>
+
+<div class="col-md-offset-4 col-md-4 col-sm-offset-4 col-sm-4">
+     <div class="section-btn">
+          <a href="/programmesfront" class="form-control" id="cf-submit" name="submit"><span data-hover="Ajouter un programme">Ajouter un programme</span></a>
+     </div>
+</div>
+
+<br><br><br>
+<footer>
+
+
+
+
+     <div class="container">
+          <div class="row">
+
+               <div class="col-md-5 col-sm-6">
+                    <h3>Hytaco</h3>
+                    <p>08 Rue Ibn Kholdoun , El Ghazela , <br>Riadh El Andalous</p>
+
+
+               </div>
+
+               <div class="col-md-4 col-sm-6">
+                    <div class="footer-info">
+                         <h3>Restez en contact</h3>
+                         <p><a href="tel:55039837">+216 55 039 837</a></p>
+                         <p><a href="mailto:info@company.com">hytaco.group@gmail.com</a></p>
+                         <p><a href="#">@ESPRIT</a></p>
+                    </div>
+               </div>
+
+               <div class="col-md-3 col-sm-12">
+
+                    <h3>A propos de nous</h3>
+                    <p>Nous somme un groupe de 6 personnes de l'etabliseement ESPRIT<br> avec une seule motivation , créer<br>le premier site de camping en Tunisie.</p>
+                    <ul class="social-icon">
+                         <li><a href="#" class="fa fa-twitter"></a></li>
+                         <li><a href="#" class="fa fa-facebook"></a></li>
+                         <li><a href="#" class="fa fa-instagram"></a></li>
+                         <li><a href="#" class="fa fa-linkedin"></a></li>
+                    </ul>
+
+               </div>
+
+               <div class="clearfix"></div>
+
+
+          </div>
+     </div>
+     <div class="pagination-area pb-115 text-center">
+          <div class="container">
+               <div class="row">
+                    <div class="col-xl-12">
+                         <div class="single-wrap d-flex justify-content-center">
+                              <nav aria-label="Page navigation example">
+                                   <ul class="pagination justify-content-start">
+                                        <li class="page-item"><a class="page-link" href="">{{ knp_pagination_render(progs) }}
+                                             </a></li>
+                                   </ul>
+                              </nav>
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </div>
+</footer>
+
+
+<!-- SCRIPTS -->
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.parallax.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/magnific-popup-options.js"></script>
+<script src="js/modernizr.custom.js"></script>
+<script src="js/smoothscroll.js"></script>
+<script src="js/custom.js"></script>
+
+</body>
+</html>

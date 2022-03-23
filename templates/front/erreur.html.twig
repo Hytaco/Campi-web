@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<title>Scenic HTML Template</title>
+
+<!--
+
+Template 2099 Scenic
+
+http://www.tooplate.com/view/2099-scenic
+
+-->
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="author" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<link rel="stylesheet" href="css/magnific-popup.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="css/stylep.css?jhh">
+<link rel="stylesheet" href="css/owl.theme.css">
+<link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/tooplate-style.css">
+<!-- MAIN CSS -->
+
+<style>
+    @media(min-width:768px) {
+        .custom-navbar {
+            background: #4dc47d;
+        }
+    }
+</style>
+
+</head>
+<body>
+
+
+
+
+<!-- MENU -->
+<div class="navbar custom-navbar navbar-fixed-top" role="navigation">
+     <div class="container">
+
+          <!-- NAVBAR HEADER -->
+          <div class="navbar-header">
+               <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon icon-bar"></span>
+                    <span class="icon icon-bar"></span>
+                    <span class="icon icon-bar"></span>
+               </button>
+               <!-- lOGO -->
+               <a href="visitor.html" class="navbar-brand">Campi</a>
+          </div>
+
+          <!-- MENU LINKS -->
+          <div class="collapse navbar-collapse">
+               <ul class="nav navbar-nav navbar-right">
+                    <li><a href="/programmesf" class="smoothScroll">Programmes</a></li>
+                    <li><a href="/evenementf" class="smoothScroll">Evenements</a></li>
+                    <li><a href="#team" class="smoothScroll">Categories</a></li>
+                    <li><a href="#aboutlocaux" class="smoothScroll">Locaux</a></li>
+                    <li><a href="/alertsf" class="smoothScroll">Alertes</a></li>
+                    <li><a href="#alerts" class="smoothScroll">Reclamations</a></li>
+                    <li><a href="/proposition" class="smoothScroll">Propositions</a></li>
+                    <li><a href="/panier" class="smoothScroll">Panier</a></li>
+                    <li><a href="/logoutf" class="smoothScroll">Deconnexion</a></li>
+               </ul>
+          </div>
+
+     </div>
+</div>
+
+
+
+<br><br><br><br><br><br><br>
+<h1>Erreur</h1>
+<h2>{{ erreur }}</h2>
+<footer>
+
+
+
+
+     <div class="container">
+          <div class="row">
+
+               <div class="col-md-5 col-sm-6">
+                    <h3>Hytaco</h3>
+                    <p>08 Rue Ibn Kholdoun , El Ghazela , <br>Riadh El Andalous</p>
+
+
+               </div>
+
+               <div class="col-md-4 col-sm-6">
+                    <div class="footer-info">
+                    	<h3>Restez en contact</h3>
+                         <p><a href="tel:55039837">+216 55 039 837</a></p>
+                         <p><a href="mailto:info@company.com">hytaco.group@gmail.com</a></p>
+                         <p><a href="#">@ESPRIT</a></p>
+                    </div>
+               </div>
+
+               <div class="col-md-3 col-sm-12">
+
+                    <h3>A propos de nous</h3>
+                    <p>Nous somme un groupe de 6 personnes de l'etabliseement ESPRIT<br> avec une seule motivation , créer<br>le premier site de camping en Tunisie.</p>
+                    <ul class="social-icon">
+                         <li><a href="#" class="fa fa-twitter"></a></li>
+                         <li><a href="#" class="fa fa-facebook"></a></li>
+                         <li><a href="#" class="fa fa-instagram"></a></li>
+                         <li><a href="#" class="fa fa-linkedin"></a></li>
+                    </ul>
+
+               </div>
+
+               <div class="clearfix"></div>
+
+
+          </div>
+     </div>
+</footer>
+
+
+<!-- SCRIPTS -->
+
+{% block javascripts %}
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+        function submit(event) {
+            var array = [];
+            event.preventDefault();
+            document.querySelectorAll('.qty').forEach(function (qty) {
+                var y = qty.parentNode.parentNode.parentNode.parentNode ;
+                if ( y.style.display != "none"){
+                    array.push(parseInt(qty.value));
+                }
+console.log(array);
+                });
+            const json = JSON.stringify({ "qty": array });
+            console.log(json);
+            axios.post("http://127.0.0.1:8000/ajoutcom",json).then(function (res){
+                window.location.replace(res.data.link);
+            });
+        }
+document.getElementById("checksub").addEventListener("click",submit);
+        function  Delete(event){
+            event.preventDefault();
+ var x =   event.target.parentNode.parentNode.parentNode;
+ console.log( x);
+ x.style.display = "none" ;
+            var l = event.target.href;
+      var id =    l.substring(l.indexOf("#")+1,l.length);
+          axios.get("http://127.0.0.1:8000/panierdel/"+id).then(function(response){
+console.log(response);
+          });
+        }
+        document.querySelectorAll('.remove').forEach(function (remove){
+            remove.addEventListener('click',Delete);
+        });
+
+    function Change(event){
+        document.getElementById('finaltotal').innerHTML=document.getElementById('finaltotal').innerHTML-this.
+            parentNode.parentNode.parentNode.lastChild.previousSibling.previousSibling.previousSibling.childNodes[1].
+            innerHTML+event.target.value *this.parentNode.nextSibling.innerHTML;
+this.parentNode.parentNode.parentNode.lastChild.previousSibling.
+    previousSibling.previousSibling.childNodes[1].innerHTML=  event.target.value *this.parentNode.nextSibling.innerHTML
+    }
+document.querySelectorAll('.qty').forEach(function (qty){
+    qty.addEventListener('change',Change);
+});
+</script>
+{% endblock %}
+
+</body>
+</html>

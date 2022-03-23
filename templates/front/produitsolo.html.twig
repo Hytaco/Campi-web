@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Campi</title>
+
+    <!--
+
+    Template 2099 Scenic
+
+    http://www.tooplate.com/view/2099-scenic
+
+    -->
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link href={{asset("css/font-awesome.min.css")}} rel="stylesheet">
+    <link href={{ asset("css/bootstrap.min.css") }} rel="stylesheet">
+    <link href="{{asset("css/templatemo-style.css")}}" rel="stylesheet">
+    <link href="{{asset("css/owl.theme.css")}}" rel="stylesheet">
+    <link href="{{asset("css/owl.carousel.css")}}" rel="stylesheet">
+    <link href="{{asset("css/templatemo-green.css")}}" rel="stylesheet">
+    <link href="{{asset("css/tooplate-style.css")}}" rel="stylesheet">
+    <link href="{{asset("css/magnific-popup.css")}}" rel="stylesheet">
+    <link rel="stylesheet" href="css/owl.carousele.min.css" type="text/css">
+    <link rel="stylesheet" href="css/stylee.css" type="text/css">
+
+</head>
+
+<body>
+
+
+<style type="text/css">
+
+    @media(min-width:768px) {
+        .custom-navbar {
+            background: #4dc47d;
+        }
+        .custom-navbar.top-nav-collapse {
+            background: #4dc47d;
+            padding: 20px 0;
+        }
+    }
+
+
+
+
+</style>
+<!-- MENU -->
+<div class="navbar custom-navbar navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- NAVBAR HEADER -->
+        <div class="navbar-header">
+            <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon icon-bar"></span>
+                <span class="icon icon-bar"></span>
+                <span class="icon icon-bar"></span>
+            </button>
+            <!-- lOGO -->
+            <a href="/accueil" class="navbar-brand">Campi</a>
+        </div>
+
+        <!-- MENU LINKS -->
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="/programmesf" class="smoothScroll">Programmes</a></li>
+                <li><a href="/evenementf" class="smoothScroll">Evenements</a></li>
+                <li><a href="#team" class="smoothScroll">Categories</a></li>
+                <li><a href="#aboutlocaux" class="smoothScroll">Locaux</a></li>
+                <li><a href="/alertsf" class="smoothScroll">Alertes</a></li>
+                <li><a href="#alerts" class="smoothScroll">Reclamations</a></li>
+                <li><a href="/proposition" class="smoothScroll">Propositions</a></li>
+                <li><a href="/panier" class="smoothScroll">Panier</a></li>
+                <li><a href="/logoutf" class="smoothScroll">Deconnexion</a></li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+
+<section class="product-details spad">
+    <div style="margin-top: 50px">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-6">
+                <div class="product__details__pic">
+                    {%for p in prod%}
+                    <div class="product__details__pic__item">
+                        <img src="images/properties/{{ p.imageName }}" alt="Bicycle" class="product__details__pic__item--large">
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6">
+                <div class="product__details__text">
+                    <h3>{{p.nom}}</h3>
+                    <div class="product__details__rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-o"></i>
+                        <span>(18 reviews)</span>
+                    </div>
+                    <div class="product__details__price">{{ p.prix }}dt</div>
+                    <p>{{ p.description }}</p>
+                <div class="primary-btn" >
+                    <a href="#" style="color: #ffffff" class ="ajoutlink"  id="a{{ p.id }}">
+                            <div   id ="f{{p.id}}"> </div>AJOUTER</a></div>
+                    <a href="/produitf" class="primary-btn">RETOUR</a>
+                </div>
+
+                {% endfor %}
+            </div>
+        </div>
+        </div>
+    </div>
+</section>
+
+
+<div class="product-details spad">
+    <div style="margin-top: -290px">
+    <div class="container">
+        <div class="row">
+<div class="col-lg-12">
+    <div class="product__details__tab">
+        <ul class="nav nav-tabs" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" data-toggle="tab" href="#tabs-1" role="tab"
+                   aria-selected="true">Categories</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#tabs-3" role="tab"
+                   aria-selected="false">Produits</a>
+            </li>
+        </ul>
+        <div class="tab-content">
+
+            <div class="tab-pane active" id="tabs-1" role="tabpanel">
+                <div class="product__details__tab__desc">
+                        <h6>Infomations des Categories</h6>
+                    <p>
+                        {% for c in cat %}
+                        {{ c.description }}
+                        {% endfor %}
+                    </p>
+
+                </div>
+            </div>
+            <div class="tab-pane" id="tabs-3" role="tabpanel">
+                <div class="product__details__tab__desc">
+                    <h6>Infomations des produits</h6>
+                    <p>
+                        {%for pr in prods%}
+                        {{ pr.description }}
+                        {% endfor %}
+
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+
+
+<!-- Featured Section End -->
+<section class="categories">
+    <div class="container">
+        <div class="row">
+            <div class="categories__slider owl-carousel">
+                {% for pu in pubicite %}
+
+                    <div class="col-lg-3" align="center">
+                        <img style="height: 60px; width: 300px" src="images/properties/{{ pu.imageName }}" class="categories__item set-bg">
+                        <div align="center"><h5><a href="{{ pu.lien }}" >{{ pu.nom }} </a></h5></div>
+                    </div>
+                {% endfor %}
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+    <footer>
+
+
+
+
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-5 col-sm-6">
+                <h3>Hytaco</h3>
+                <p>08 Rue Ibn Kholdoun , El Ghazela , <br>Riadh El Andalous</p>
+
+
+            </div>
+
+            <div class="col-md-4 col-sm-6">
+                <div class="footer-info">
+                    <h3>Restez en contact</h3>
+                    <p><a href="tel:55039837">+216 55 039 837</a></p>
+                    <p><a href="mailto:info@company.com">hytaco.group@gmail.com</a></p>
+                    <p><a href="#">@ESPRIT</a></p>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-12">
+
+                <h3>A propos de nous</h3>
+                <p>Nous somme un groupe de 6 personnes de l'etabliseement ESPRIT<br> avec une seule motivation , créer<br>le premier site de camping en Tunisie.</p>
+                <ul class="social-icon">
+                    <li><a href="#" class="fa fa-twitter"></a></li>
+                    <li><a href="#" class="fa fa-facebook"></a></li>
+                    <li><a href="#" class="fa fa-instagram"></a></li>
+                    <li><a href="#" class="fa fa-linkedin"></a></li>
+                </ul>
+
+            </div>
+
+            <div class="clearfix"></div>
+
+
+        </div>
+    </div>
+</footer>
+
+
+
+<!-- Js Plugins -->
+<script src="js/jquerye-3.3.1.min.js"></script>
+<script src="js/bootstrape.min.js"></script>
+<script src="js/jquerye.nice-select.min.js"></script>
+<script src="js/jquerye-ui.min.js"></script>
+<script src="js/jquerye.slicknav.js"></script>
+<script src="js/mixitupe.min.js"></script>
+<script src="js/owle.carousel.min.js"></script>
+<script src="js/maine.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+<script>
+    $(document).ready(function() {
+        $(".ajoutlink").click(function(event) {
+            var id =         event.target.id.substring(1,event.target.id.length);
+            axios.get("http://127.0.0.1:8000/ajoutpanier/"+id).then(function (res){
+                console.log(response);
+            });
+        });
+    });
+
+
+</script>
+
+
+
+</body>
+
+</html>

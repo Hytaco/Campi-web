@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Campi</title>
+
+    <!--
+
+    Template 2099 Scenic
+
+    http://www.tooplate.com/view/2099-scenic
+
+    -->
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="css/tooplate-style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/owl.theme.css">
+    <link rel="stylesheet" href="css/owl.carousel.css">
+
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="css/tooplate-style.css">
+
+</head>
+<body>
+
+<!-- PRE LOADER -->
+
+
+<div class="preloader">
+    <div class="spinner">
+        <span class="sk-inner-circle"></span>
+    </div>
+</div>
+
+<style type="text/css">
+
+    @media(min-width:768px) {
+        .custom-navbar {
+            background: #4dc47d;
+        }
+        .custom-navbar.top-nav-collapse {
+            background: #4dc47d;
+            padding: 20px 0;
+        }
+    }
+
+
+
+
+</style>
+<!-- MENU -->
+<div class="navbar custom-navbar navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- NAVBAR HEADER -->
+        <div class="navbar-header">
+            <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon icon-bar"></span>
+                <span class="icon icon-bar"></span>
+                <span class="icon icon-bar"></span>
+            </button>
+            <!-- lOGO -->
+            <a href="/accueil" class="navbar-brand">Campi</a>
+        </div>
+
+        <!-- MENU LINKS -->
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="/programmesf" class="smoothScroll">Programmes</a></li>
+                <li><a href="/evenementf" class="smoothScroll">Evenements</a></li>
+                <li><a href="#team" class="smoothScroll">Categories</a></li>
+                <li><a href="#aboutlocaux" class="smoothScroll">Locaux</a></li>
+                <li><a href="/alertsf" class="smoothScroll">Alertes</a></li>
+                <li><a href="#alerts" class="smoothScroll">Reclamations</a></li>
+                <li><a href="/proposition" class="smoothScroll">Propositions</a></li>
+                <li><a href="/panier" class="smoothScroll">Panier</a></li>
+                <li><a href="/logoutf" class="smoothScroll">Deconnexion</a></li>
+
+
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+
+
+<!-- CONTACT -->
+<section id="programme" class="parallax-section" >
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-offset-3 col-md-6 col-sm-12">
+                <div class="section-title">
+                        </div>
+                    <h3>Programme</h3>
+                    <h4>Ici, vous pouvez nous envoyer une proposition d'un programme.</h4>
+                </div>
+            </div>
+
+            <div class="clearfix"></div>
+            <div class="col-md-offset-2 col-md-8 col-sm-12">
+                <!-- CONTACT FORM HERE -->
+                {{ form_start(form3) }}
+                <div class="col-md-12 col-sm-12">
+
+                {#  <input type="text" name="nom" class="form-control" id="inputFirstName" placeholder="nom"> #}
+                {{ form_row(form3.nom,{'attr': {'class': 'form-control','placeholder':'nom'}}) }}
+
+                </div>
+
+                <div class="col-md-12 col-sm-12">
+                    {#  <input type="text" name="date" class="form-control" id="inputFirstName" placeholder="date"> #}
+                    {{ form_row(form3.date,{'attr': {'class': 'form-control','placeholder':'date'}}) }}
+
+                </div>
+
+                <div class="col-md-12 col-sm-12">
+                    {#  <input type="text" name="duree" class="form-control" id="inputFirstName" placeholder="duree"> #}
+                    {{ form_row(form3.duree,{'attr': {'class': 'form-control','placeholder':'duree'}}) }}
+                </div>
+
+
+                <div class="col-md-12 col-sm-12">
+                    {#  <input type="text" name="details" class="form-control" id="inputFirstName" placeholder="details"> #}
+                    {{ form_row(form3.details,{'attr': {'class': 'form-control','placeholder':'details'}}) }}
+                </div>
+
+                <div class="col-md-12 col-sm-12">
+                    {#  <input type="text" name="duree" class="form-control" id="inputFirstName" placeholder="duree"> #}
+                    {{ form_row(form3.transporteur,{'attr': {'class': 'form-control','placeholder':'duree'}}) }}
+                </div>
+
+                <div class="col-md-12 col-sm-12">
+                    {{ form_row(form3.locale,{'attr': {'class': 'form-control','placeholder':'locale'}}) }}
+                </div>
+            </div>
+            {# <input type="captchaCode" class="form-control" id="inputFirstName" placeholder="captchaCode">#}
+            <div class="col-md-offset-4 col-md-4 col-sm-offset-4 col-sm-4">
+                <div class="section-btn">
+                    <button type="submit"  class="form-control" id="cf-submit" name="submit"><span data-hover="Ajouter">Ajouter</span></button>
+                </div>
+            </div>
+
+        </div>
+        {{ form_end(form3) }}
+
+</section>
+
+<!-- FOOTER -->
+
+<!-- CONTACT -->
+<section id="programme" class="parallax-section" >
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-offset-3 col-md-6 col-sm-12">
+                <div class="section-title">
+                </div>
+                <h3>Evenement</h3>
+                <h4>Ici, vous pouvez nous proposer un evenement.</h4>
+            </div>
+        </div>
+
+        <div class="clearfix"></div>
+        <div class="col-md-offset-2 col-md-8 col-sm-12">
+            <!-- CONTACT FORM HERE -->
+            {{ form_start(form1) }}
+
+            <div class="col-md-12 col-sm-12">
+                {#  <input type="text" name="type" class="form-control" id="cf-type" placeholder="Type"> #}
+                {{ form_widget(form1.nom,{'attr': {'class': 'form-control','placeholder':'Nom Proposé'}}) }}
+
+            </div>
+
+            <div class="col-md-4 col-sm-4" style="margin-left: 250px" >
+                {#  <input type="text" name="adresse" class="form-control" id="cf-localisation" placeholder="adresse"> #}
+                {{ form_widget(form1.date,{'attr': {'class': 'form-control','placeholder':'Date'}}) }}
+            </div>
+
+            <div class="col-md-12 col-sm-12">
+                {#  <input type="text" name="localisation" class="form-control" id="inputFirstName" placeholder="Localisation">#}
+                {{ form_widget(form1.nombrePlace,{'attr': {'class': 'form-control','placeholder':'Nombre de Place Proposés'}}) }}
+            </div>
+
+            <div class="col-md-12 col-sm-12">
+                {#  <input type="text" name="localisation" class="form-control" id="inputFirstName" placeholder="Localisation">#}
+                {{ form_widget(form1.mail,{'attr': {'class': 'form-control','placeholder':'Email'}}) }}
+            </div>
+
+
+
+        </div>
+        {# <input type="captchaCode" class="form-control" id="inputFirstName" placeholder="captchaCode">#}
+        <div class="col-md-offset-4 col-md-4 col-sm-offset-4 col-sm-4">
+            <div class="section-btn">
+                <button type="submit"  class="form-control" id="cf-submit" name="submit"><span data-hover="Send Message">Send Message</span></button>
+            </div>
+        </div>
+
+    </div>
+    {{ form_end(form1) }}
+    </div>
+</section>
+
+<!-- FOOTER -->
+
+
+
+
+
+<!-- CONTACT -->
+<section id="programme" class="parallax-section" >
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-offset-2 col-md-8 col-sm-12">
+                <div class="section-title">
+                </div>
+                <h3>Transporteur</h3>
+                <h4>Ici, vous pouvez nous envoyer une demande pour travailler comme un transporteur</h4>
+            </div>
+        </div>
+
+        <div class="clearfix"></div>
+        <div class="col-md-offset-2 col-md-8 col-sm-12">
+            <!-- CONTACT FORM HERE -->
+            {{ form_start(form) }}
+
+
+
+            <div class="col-md-12 col-sm-12">
+                {#  <input type="text" name="nom" class="form-control" id="inputFirstName" placeholder="nom"> #}
+                {{ form_widget(form.nom,{'attr': {'class': 'form-control','placeholder':'nom'}}) }}
+
+            </div>
+
+            <div class="col-md-12 col-sm-12">
+                {#  <input type="text" name="adresse" class="form-control" id="inputFirstName" placeholder="adresse"> #}
+                {{ form_widget(form.adresse,{'attr': {'class': 'form-control','placeholder':'adresse'}}) }}
+
+            </div>
+
+            <div class="col-md-12 col-sm-12">
+                {#  <input type="text" name="numero" class="form-control" id="inputFirstName" placeholder="numero"> #}
+                {{ form_widget(form.numero,{'attr': {'class': 'form-control','placeholder':'numero'}}) }}
+
+            </div>
+
+            <div class="col-md-12 col-sm-12">
+                {#  <input type="text" name="mail" class="form-control" id="inputFirstName" placeholder="mail"> #}
+                {{ form_widget(form.mail,{'attr': {'class': 'form-control','placeholder':'mail'}}) }}
+
+            </div>
+
+            <div class="col-md-12 col-sm-12">
+            {#  <input type="text" name="type" class="form-control" id="inputFirstName" placeholder="Type"> #}
+            {{ form_widget(form.type,{'attr': {'class': 'form-control','placeholder':'type'}}) }}
+            </div>
+
+
+        </div>
+        {# <input type="captchaCode" class="form-control" id="inputFirstName" placeholder="captchaCode">#}
+        <div class="col-md-offset-4 col-md-4 col-sm-offset-4 col-sm-4">
+            <div class="section-btn">
+                <button type="submit"  class="form-control" id="cf-submit" name="submit"><span data-hover="Send Message">Send Message</span></button>
+            </div>
+        </div>
+
+    </div>
+    {{ form_end(form) }}
+
+</section>
+
+<!-- FOOTER -->
+
+
+
+
+
+
+
+<!-- CONTACT -->
+<section id="programme" class="parallax-section" >
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-offset-3 col-md-6 col-sm-12">
+                <div class="section-title">
+                </div>
+                <h3>Livreur</h3>
+                <h4>Ici, vous pouvez nous envoyer une demande pour travailler comme un livreur.</h4>
+            </div>
+        </div>
+
+        <div class="clearfix"></div>
+        <div class="col-md-offset-2 col-md-8 col-sm-12">
+            <!-- CONTACT FORM HERE -->
+            {{ form_start(form2) }}
+
+
+
+            <div class="col-md-12 col-sm-12">
+                {#  <input type="text" name="nom" class="form-control" id="inputFirstName" placeholder="nom"> #}
+                {{ form_widget(form2.nom,{'attr': {'class': 'form-control','placeholder':'nom'}}) }}
+            </div>
+
+            <div class="col-md-12 col-sm-12">
+                {#  <input type="text" name="adresse" class="form-control" id="inputFirstName" placeholder="adresse"> #}
+                {{ form_widget(form2.adresse,{'attr': {'class': 'form-control','placeholder':'adresse'}}) }}
+            </div>
+
+            <div class="col-md-12 col-sm-12">
+                {#  <input type="text" name="telephone" class="form-control" id="inputFirstName" placeholder="telephone"> #}
+                {{ form_widget(form2 .telephone,{'attr': {'class': 'form-control','placeholder':'telephone'}}) }}
+            </div>
+
+
+            <div class="col-md-12 col-sm-12">
+                {#  <input type="text" name="mail" class="form-control" id="inputFirstName" placeholder="mail"> #}
+                {{ form_widget(form2.mail,{'attr': {'class': 'form-control','placeholder':'mail'}}) }}
+            </div>
+
+
+        </div>
+        {# <input type="captchaCode" class="form-control" id="inputFirstName" placeholder="captchaCode">#}
+        <div class="col-md-offset-4 col-md-4 col-sm-offset-4 col-sm-4">
+            <div class="section-btn">
+                <button type="submit"  class="form-control" id="cf-submit" name="submit"><span data-hover="Send Message">Send Message</span></button>
+            </div>
+        </div>
+
+    </div>
+    {{ form_end(form2) }}
+
+
+</section>
+
+<!-- FOOTER -->
+
+
+
+<footer>
+
+
+
+
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-5 col-sm-6">
+                <h3>Hytaco</h3>
+                <p>08 Rue Ibn Kholdoun , El Ghazela , <br>Riadh El Andalous</p>
+
+
+            </div>
+
+            <div class="col-md-4 col-sm-6">
+                <div class="footer-info">
+                    <h3>Restez en contact</h3>
+                    <p><a href="tel:55039837">+216 55 039 837</a></p>
+                    <p><a href="mailto:info@company.com">hytaco.group@gmail.com</a></p>
+                    <p><a href="#">@ESPRIT</a></p>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-12">
+
+                <h3>A propos de nous</h3>
+                <p>Nous somme un groupe de 6 personnes de l'etabliseement ESPRIT<br> avec une seule motivation , créer<br>le premier site de camping en Tunisie.</p>
+                <ul class="social-icon">
+                    <li><a href="#" class="fa fa-twitter"></a></li>
+                    <li><a href="#" class="fa fa-facebook"></a></li>
+                    <li><a href="#" class="fa fa-instagram"></a></li>
+                    <li><a href="#" class="fa fa-linkedin"></a></li>
+                </ul>
+
+            </div>
+
+            <div class="clearfix"></div>
+
+
+        </div>
+    </div>
+</footer>
+
+
+<script type="text/javascript" src="{{ asset('vendors/scripts/push.js') }}"></script>
+<script type="text/javascript" src="{{ asset('vendors/scripts/serviceWorker.min.js') }}"></script>
+
+<script>
+    function noti(){
+
+        Push.create(" Notification  :",{
+            body: "offre bien ajouté  ! : ",
+            timeout: 10000,
+
+
+        });
+
+    };
+</script>
+
+<!-- SCRIPTS -->
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.parallax.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/magnific-popup-options.js"></script>
+<script src="js/modernizr.custom.js"></script>
+<script src="js/smoothscroll.js"></script>
+<script src="js/custom.js"></script>
+
+
+</body>
+</html>

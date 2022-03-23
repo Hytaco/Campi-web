@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Campi</title>
+
+    <!--
+
+    Template 2099 Scenic
+
+    http://www.tooplate.com/view/2099-scenic
+
+    -->
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link href={{asset("css/font-awesome.min.css")}} rel="stylesheet">
+    <link href={{ asset("css/bootstrap.min.css") }} rel="stylesheet">
+    <link href="{{asset("css/templatemo-style.css")}}" rel="stylesheet">
+    <link href="{{asset("css/owl.theme.css")}}" rel="stylesheet">
+    <link href="{{asset("css/owl.carousel.css")}}" rel="stylesheet">
+    <link href="{{asset("css/templatemo-green.css")}}" rel="stylesheet">
+    <link href="{{asset("css/tooplate-style.css")}}" rel="stylesheet">
+    <link href="{{asset("css/magnific-popup.css")}}" rel="stylesheet">
+    <link rel="stylesheet" href="css/owl.carousele.min.css" type="text/css">
+    <link rel="stylesheet" href="css/stylee.css" type="text/css">
+
+</head>
+
+<body>
+
+
+<style type="text/css">
+
+    @media(min-width:768px)
+    {
+        .custom-navbar
+        {
+            background: #4dc47d;
+        }
+        .custom-navbar.top-nav-collapse
+        {
+            background: #4dc47d;
+            padding: 20px 0;
+        }
+    }
+    .header {
+        display: flex;
+    }
+
+    .header p {
+        flex: 1;
+        font-weight: bold;
+    }
+
+    .results {
+        display: flex;
+    }
+
+    .results p {
+        flex: 1;
+    }
+
+</style>
+<!-- MENU -->
+<div class="navbar custom-navbar navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- NAVBAR HEADER -->
+        <div class="navbar-header">
+            <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon icon-bar"></span>
+                <span class="icon icon-bar"></span>
+                <span class="icon icon-bar"></span>
+            </button>
+            <!-- lOGO -->
+            <a href="/accueil" class="navbar-brand">Campi</a>
+        </div>
+
+        <!-- MENU LINKS -->
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="/programmesf" class="smoothScroll">Programmes</a></li>
+                <li><a href="/evenementf" class="smoothScroll">Evenements</a></li>
+                <li><a href="#team" class="smoothScroll">Categories</a></li>
+                <li><a href="#aboutlocaux" class="smoothScroll">Locaux</a></li>
+                <li><a href="/alertsf" class="smoothScroll">Alertes</a></li>
+                <li><a href="#alerts" class="smoothScroll">Reclamations</a></li>
+                <li><a href="/proposition" class="smoothScroll">Propositions</a></li>
+                <li><a href="/panier" class="smoothScroll">Panier</a></li>
+                <li><a href="/logoutf" class="smoothScroll">Deconnexion</a></li>
+
+
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+<!-- Featured Section Begin -->
+<section class="featured spad">
+    <div style="margin-top: 50px">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-title">
+                    <h2>Nos produits</h2>
+                </div>
+
+
+                <!-- Hero Section Begin -->
+                        <div class="row">
+                          <div class="col-1" style="margin-left: 380px">
+                                <div class="col-lg-9">
+                                <div class="hero__search">
+                                    <div class="hero__search__form">
+                                        <form action="#">
+                                            <input id="myInput" name="q"  placeholder="Search for" required >
+                                            <i class="fa fa-searchs" ></i>
+                                       </form>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                          </div>
+                <!-- Hero Section End -->
+                <div class="featured__controls">
+                    <ul>
+                        <li class="active"><a href="/produitf" style="color: #0b0b0b">Produits </a></li>
+
+                        {% for c in cat %}
+                            <li class="active"> <a href="/produitf?id={{ c.id }}" style="color: #0b0b0b"> {{ c.nom }} </a> </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row featured__filter listing">
+            {%for p in prod%}
+                <div class="col-lg-3 col-md-4 col-sm-6 mix oranges fresh-meat" data-value="{{ p.nom }}" >
+                <div class="featured__item">
+                    <div class="featured__item__pic set-bg " >
+                       <img style="height: 200px; width: 200px" src="images/properties/{{ p.imageName }}" alt="Bicycle" class="card-img-top">
+                        <ul class="featured__item__pic__hover myUL">
+                            <li><a href="{{ path('post_like',{'id':p.id}) }}" class="btn btn-link js-like ">
+                                    {% if app.user and p.islikedByUser(app.user) %}
+                                        <i class="fa fa-gratipay"></i>
+                                    {% else %}
+                                        <i class="fa  fa-heart-o"></i>
+                                    {% endif %}
+                                    <span class="js-likes">{{ p.like | length }}</span>
+                                </a>
+                            </li>
+                            <li><a href="/produitsolo?id={{ p.id }}"><i class="fa fa-retweet"></i></a></li>
+                            <li><a href="#"  class ="ajoutlink" id="a{{ p.id }}">
+                                <div class="cadreAj"><div class="fa fa-shopping-cart" id ="f{{ p.id }}"></div></div></a></li>
+                        </ul>
+                    </div>
+                    <div class="featured__item__text " >
+                     <div class="elem" ><h6><a href="#">{{ p.nom }}</a></h6></div>
+                        <h5>{{ p.prix }}dt</h5>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+
+        </div>
+    <div align="center">  {{ knp_pagination_render(prod) }}</div>
+    </div>
+    </div>
+</section>
+<!-- Featured Section End -->
+<section class="categories">
+    <div class="container">
+        <div class="row">
+            <div class="categories__slider owl-carousel">
+                {% for pu in pubicite %}
+
+                    <div class="col-lg-3" align="center">
+                        <img style="height: 60px; width: 300px" src="images/properties/{{ pu.imageName }}" class="categories__item set-bg">
+                        <div align="center"><h5><a href="{{ pu.lien }}" >{{ pu.nom }} </a></h5></div>
+                    </div>
+                {% endfor %}
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+</footer>
+<!-- Footer Section End -->
+
+<footer>
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-5 col-sm-6">
+                <h3>Hytaco</h3>
+                <p>08 Rue Ibn Kholdoun , El Ghazela , <br>Riadh El Andalous</p>
+
+
+            </div>
+
+            <div class="col-md-4 col-sm-6">
+                <div class="footer-info">
+                    <h3>Restez en contact</h3>
+                    <p><a href="tel:55039837">+216 55 039 837</a></p>
+                    <p><a href="mailto:info@company.com">hytaco.group@gmail.com</a></p>
+                    <p><a href="#">@ESPRIT</a></p>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-12">
+
+                <h3>A propos de nous</h3>
+                <p>Nous somme un groupe de 6 personnes de l'etabliseement ESPRIT<br> avec une seule motivation , créer<br>le premier site de camping en Tunisie.</p>
+                <ul class="social-icon">
+                    <li><a href="#" class="fa fa-twitter"></a></li>
+                    <li><a href="#" class="fa fa-facebook"></a></li>
+                    <li><a href="#" class="fa fa-instagram"></a></li>
+                    <li><a href="#" class="fa fa-linkedin"></a></li>
+                </ul>
+
+            </div>
+
+            <div class="clearfix"></div>
+
+
+        </div>
+    </div>
+    </div>
+</footer>
+
+<!-- Js Plugins -->
+<script src="js/jquerye-3.3.1.min.js"></script>
+<script src="js/bootstrape.min.js"></script>
+<script src="js/jquerye.nice-select.min.js"></script>
+<script src="js/jquerye-ui.min.js"></script>
+<script src="js/jquerye.slicknav.js"></script>
+<script src="js/mixitupe.min.js"></script>
+<script src="js/owle.carousel.min.js"></script>
+<script src="js/maine.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+<script>
+    $(document).ready(function() {
+        $(".ajoutlink").click(function(event) {
+            var id =         event.target.id.substring(1,event.target.id.length);
+            axios.get("http://127.0.0.1:8000/ajoutpanier/"+id).then(function (res){
+                console.log(response);
+            });
+        });
+    });
+
+
+</script>
+
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script>
+    function onClickBtnLike(event){
+        event.preventDefault();
+        const url = this.href;
+        const spanCount = this.querySelector('span.js-likes');
+        const icone = this.querySelector('i');
+
+        axios.get(url).then(function (response){
+
+
+
+            spanCount.textContent = response.data.likes;
+            if (icone.classList.contains('fa-heart-o')) {
+                icone.classList.replace('fa-heart-o','fa-gratipay');
+            }
+            else {icone.classList.replace('fa-gratipay','fa-heart-o');
+            }
+        }).catch(function (error){
+            if(error.response.status === 403 )
+            {
+                window.alert("vous ne pouvez pas liker un article si vous etes pas connecte !")
+
+            }
+        });
+    }
+    document.querySelectorAll('a.js-like').forEach(function(link){
+        link.addEventListener('click',onClickBtnLike);
+    })
+
+
+
+
+
+</script>
+
+
+<script>
+    document.getElementById("myInput").addEventListener("change",function (){
+        document.querySelectorAll(".col-lg-3").forEach(function (div){
+            if(!div.getAttribute('data-value').includes(document.getElementById("myInput").value.toUpperCase())){
+                div.style.display="none";
+            }else{
+                div.style.display="inline";
+
+            }
+        });
+    });
+
+</script>
+
+
+
+
+</body>
+
+</html>

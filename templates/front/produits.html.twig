@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+     <title>Campi</title>
+
+     <!--
+
+     Template 2099 Scenic
+
+     http://www.tooplate.com/view/2099-scenic
+
+     -->
+
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+     <meta name="description" content="">
+     <meta name="keywords" content="">
+     <meta name="author" content="">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link href={{asset("css/font-awesome.min.css")}} rel="stylesheet">
+    <link href={{ asset("css/bootstrap.min.css") }} rel="stylesheet">
+    <link href="{{asset("css/templatemo-style.css")}}" rel="stylesheet">
+    <link href="{{asset("css/owl.theme.css")}}" rel="stylesheet">
+    <link href="{{asset("css/owl.carousel.css")}}" rel="stylesheet">
+    <link href="{{asset("css/templatemo-green.css")}}" rel="stylesheet">
+    <link href="{{asset("css/tooplate-style.css")}}" rel="stylesheet">
+    <link href="{{asset("css/magnific-popup.css")}}" rel="stylesheet">
+
+
+     <!-- MAIN CSS -->
+
+
+</head>
+<body>
+
+
+<style type="text/css">
+  
+@media(min-width:768px) {
+  .custom-navbar {
+    background: #4dc47d; 
+  }
+  .custom-navbar.top-nav-collapse {
+    background: #4dc47d;
+    padding: 20px 0;
+  }
+}
+
+
+
+
+</style>
+<!-- MENU -->
+<div class="navbar custom-navbar navbar-fixed-top" role="navigation">
+     <div class="container">
+
+          <!-- NAVBAR HEADER -->
+          <div class="navbar-header">
+               <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon icon-bar"></span>
+                    <span class="icon icon-bar"></span>
+                    <span class="icon icon-bar"></span>
+               </button>
+               <!-- lOGO -->
+               <a href="/accueil" class="navbar-brand">Campi</a>
+          </div>
+
+          <!-- MENU LINKS -->
+          <div class="collapse navbar-collapse">
+               <ul class="nav navbar-nav navbar-right">
+                   <li><a href="/programmesf" class="smoothScroll">Programmes</a></li>
+                   <li><a href="/evenementf" class="smoothScroll">Evenements</a></li>
+                   <li><a href="#team" class="smoothScroll">Categories</a></li>
+                   <li><a href="#aboutlocaux" class="smoothScroll">Locaux</a></li>
+                   <li><a href="/alertsf" class="smoothScroll">Alertes</a></li>
+                   <li><a href="#alerts" class="smoothScroll">Reclamations</a></li>
+                   <li><a href="/proposition" class="smoothScroll">Propositions</a></li>
+                   <li><a href="/panier" class="smoothScroll">Panier</a></li>
+                   <li><a href="/logoutf" class="smoothScroll">Deconnexion</a></li>
+
+
+               </ul>
+          </div>
+
+     </div>
+</div>
+<br><br><br><br><br><br><br>
+
+ <div class="container">
+
+    <div class="row">
+ <div class="col-lg-3">
+
+
+        <div class="list-group">
+       {% for c in cat %}
+          <a href="/produitf?id={{ c.id }}" class="list-group-item">Categorie : {{ c.nom }}</a>
+        {% endfor %}
+        </div>
+
+      </div>
+
+      <!-- /.col-lg-3 -->
+
+      <div class="col-lg-9">
+
+          <div class="row">
+
+
+              {%for p in prod%}
+          <div class="col-lg-4 col-md-6 mb-4">
+
+            <div class="card h-100">
+              <a href="#"><img style="height: 200px; width: 200px" src="images/properties/{{ p.imageName }}" alt="Bicycle" class="card-img-top"></a>
+              <div class="card-body">
+                <h4 class="card-title">
+                  <a href="#">{{ p.nom }}</a>
+                </h4>
+                <h5>{{ p.prix }}dt</h5>
+                <p class="card-text">{{ p.description }}</p>
+                  <p style="display: none">{{ p.id }}</p>
+                  <a href="#"  class ="ajoutlink" data-id="{{ p.id }}" >
+                      <div class="cadreAj"><div class="fas fa-cart-plus" id ="f{{p.id}}"></div></div></a>
+              </div>
+             <!-- <div class="card-footer">
+               <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+              </div>-->
+            </div>
+          </div>
+              {% endfor %}
+
+
+
+
+
+        </div>
+        <!-- /.row -->
+
+      </div>
+      <!-- /.col-lg-9 -->
+
+    </div>
+    <!-- /.row -->
+
+  </div>
+
+<footer>
+
+
+
+
+     <div class="container">
+          <div class="row">
+
+               <div class="col-md-5 col-sm-6">
+                    <h3>Hytaco</h3>
+                    <p>08 Rue Ibn Kholdoun , El Ghazela , <br>Riadh El Andalous</p>
+
+
+               </div>
+
+               <div class="col-md-4 col-sm-6">
+                    <div class="footer-info">
+                         <h3>Restez en contact</h3>
+                         <p><a href="tel:55039837">+216 55 039 837</a></p>
+                         <p><a href="mailto:info@company.com">hytaco.group@gmail.com</a></p>
+                         <p><a href="#">@ESPRIT</a></p>
+                    </div>
+               </div>
+
+               <div class="col-md-3 col-sm-12">
+
+                    <h3>A propos de nous</h3>
+                    <p>Nous somme un groupe de 6 personnes de l'etabliseement ESPRIT<br> avec une seule motivation , créer<br>le premier site de camping en Tunisie.</p>
+                    <ul class="social-icon">
+                         <li><a href="#" class="fa fa-twitter"></a></li>
+                         <li><a href="#" class="fa fa-facebook"></a></li>
+                         <li><a href="#" class="fa fa-instagram"></a></li>
+                         <li><a href="#" class="fa fa-linkedin"></a></li>
+                    </ul>
+
+               </div>
+
+               <div class="clearfix"></div>
+
+
+          </div>
+     </div>
+</footer>
+
+
+<!-- SCRIPTS -->
+<!--<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.parallax.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/magnific-popup-options.js"></script>
+<script src="js/modernizr.custom.js"></script>
+<script src="js/smoothscroll.js"></script>
+<script src="js/custom.js"></script>-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $(".ajoutlink").click(function(event) {
+            event.preventDefault();
+
+            var id =         $(this).data("id");
+
+            axios.get("http://127.0.0.1:8000/ajoutpanier/"+id).then(function (res){
+                console.log(response);
+            });
+        });
+    });
+
+
+</script>
+
+</body>
+</html>

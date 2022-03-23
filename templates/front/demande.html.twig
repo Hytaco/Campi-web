@@ -1,0 +1,22 @@
+<h1>Demande {{ type}}</h1>
+<p>une demande d'ajout d'un {{type }} a ete ajouté ,vouz pouvez l'accepter par cliquer ci dessus</p>
+nom : {{ nom }}
+<br>
+adresse : {{ adresse }}
+<br>
+email : {{ mail }}
+
+
+{% if (type == "transporteur") %}
+    <br>
+    type : {{ typet }}
+    <br>
+    numero : {{ numero }}
+    <br>
+    <a href="{{  absolute_url(path('addtran',{'nom':nom,'adresse':adresse,'numero':numero,'type':typet,'mail':mail})) }}">Accepter</a>
+{% elseif (type == "livreurs") %}
+    <br>
+    numero : {{ telephone }}
+    <br>
+    <a href="{{  absolute_url(path('addliv',{'nom':nom,'adresse':adresse,'telephone':telephone,'mail':mail})) }}">Accepter</a>
+{% endif %}
